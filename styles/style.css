@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    width: 90%;
+    padding: 1% 0;
+    margin: 0 auto;
+    border-bottom: 2px solid rgb(235, 235, 235);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header div a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2vw;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+}
+
+.header div a:hover {
+    color: rgb(102, 102, 102);
+}
+
+.header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+}
+
+.header nav a:hover {
+    color: rgb(102, 102, 102);
+}
+
+main {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1% 0;
+    margin: 0 auto;
+}
+
+.poster {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 1% 0;
+}
+
+.poster-images {
+    display: flex;
+    justify-content: center;
+}
+
+.poster-images img{
+    display: flex;
+    height: auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.poster-content {
+    position: absolute;
+    inset: 0;                         
+    display: flex;
+    justify-content: center;
+    flex-direction: column;       
+    align-items: flex-start;           
+    padding-left: calc(10% + 50px);   
+    padding-right: calc(10% + 50px);
+}
+
+.poster-content h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.7vw;
+    color: #fff;
+}
+
+.poster-content p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    color: rgb(196, 196, 196) ;
+    margin: 2% 0;
+}
+
+.poster-content button {
+    padding: 15px 40px;     
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8vw;
+    font-weight: 700;
+    color: #fff;                  
+    background-color: #f45e2b;    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.poster-content button:hover {
+    background-color: #ff7040;
+}
+
+
+.stats {
+    width: 100%;
+    margin: 1% 0;
+    padding: 3% 0;
+    border-top: 2px solid rgb(235, 235, 235);
+    border-bottom: 2px solid rgb(235, 235, 235);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+}
+
+.stat {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.stat-number {
+    font-size: 2.7vw;
+    font-weight: 700;
+    color: #f45e2b;            
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1vw;                
+    color: rgb(102, 102, 102);    
+}
+
+.stat {
+    border-left: 1px solid rgb(235, 235, 235);  
+}
+
+footer {
+    width: 100%;
+    background-color: #424242;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1%;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2.5% 0 2%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info h3 {
+    font-size: 0.9vw;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.footer-info a {
+    text-decoration: none;
+    color: rgb(196, 196, 196);
+    font-size: 0.75vw;
+    margin-bottom: 6px;
+    transition: 0.3s;
+}
+
+.footer-info p {
+    color: rgb(196, 196, 196);
+    font-size: 0.75vw;
+    margin-bottom: 6px;
+    transition: 0.3s;
+}
+
+.footer-info a:hover {
+    color: #f45e2b;
+}
+
+.footer-info p:hover {
+    color: #f45e2b;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5% 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgb(150, 150, 150);
+    font-size: 0.7vw;
+}
