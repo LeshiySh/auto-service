@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Регистрация</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header">
+                <div>
+                    <a href="../index.html">Sh·auto</a>
+                </div>
+                <button class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <a href="../index.html">Главная</a>
+                    <a href="../pages/catalog.html">Каталог</a>
+                    <a href="../pages/login.html">Войти</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="auth-container">
+                <div class="auth">
+                    <h1>Регистрация</h1>
+                    <form class="auth-form" id="regForm" novalidate>
+                        <input type="text" name="fio" placeholder="ФИО">
+                        <small class="field-error" id="err-fio"></small>
+
+                        <input type="text" name="login" placeholder="Логин">
+                        <small class="field-error" id="err-login"></small>
+
+                        <input type="email" name="email" placeholder="Email">
+                        <small class="field-error" id="err-email"></small>
+
+                        <input type="password" name="password" placeholder="Пароль">
+                        <small class="field-error" id="err-password"></small>
+
+                        <input type="password" name="confirm" placeholder="Повторите пароль">
+                        <small class="field-error" id="err-confirm"></small>
+
+                        <button type="submit">Зарегистрироваться</button>
+                        <a href="../pages/login.html">Уже зарегистрированы?</a>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
