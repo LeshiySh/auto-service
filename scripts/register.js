@@ -1,13 +1,3 @@
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.header nav');
-
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    nav.classList.toggle('open');
-});
-
-
-
 const form = document.getElementById('regForm');
 
 form.addEventListener('submit', function (e) {
