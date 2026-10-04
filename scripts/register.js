@@ -43,7 +43,7 @@ form.addEventListener('submit', function (e) {
     }
 
     if (ok) {
-        alert('Форма успешно отправлена!');
+        document.getElementById('SuccessMessenge').classList.add('show');
         form.reset();
     }
 });

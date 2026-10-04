@@ -192,14 +192,15 @@ main {
 
 footer {
     width: 100%;
-    background-color: #424242;
+    background-color: #2b2a29;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 1%;
+    margin-top: 60px;
 }
 
 .footer-container {
     width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2.5% 0 2%;
     display: flex;
@@ -207,9 +208,23 @@ footer {
     gap: 3%;
 }
 
+.footer-info-brend {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+}
+
+.footer-info-brend p {
+    color: rgb(196, 196, 196);
+    font-size: 0.75vw;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
 .footer-info {
     display: flex;
     flex-direction: column;
+    min-width: 150px;
 }
 
 .footer-info h3 {
@@ -217,29 +232,32 @@ footer {
     font-weight: 700;
     color: #fff;
     margin-bottom: 12px;
+    text-transform: uppercase
 }
 
 .footer-info a {
     text-decoration: none;
     color: rgb(196, 196, 196);
     font-size: 0.75vw;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     transition: 0.3s;
 }
 
 .footer-info p {
     color: rgb(196, 196, 196);
     font-size: 0.75vw;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     transition: 0.3s;
 }
 
 .footer-info a:hover {
     color: #f45e2b;
+    padding-left: 4px;
 }
 
 .footer-info p:hover {
     color: #f45e2b;
+    padding-left: 4px;
 }
 
 .footer-bottom {
@@ -255,10 +273,12 @@ footer {
 
 .auth-container {
     width: 100%;
+    min-height: 80vh;
+    background-color: rgb(247, 247, 247);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 30px 20px;
     box-sizing: border-box;
 }
 
@@ -268,7 +288,8 @@ footer {
     background-color: #fff;
     padding: 40px 35px;
     border-radius: 10px;
-    box-shadow: 1px 5px 20px #f45d2b8e;
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.10);
+
 }
 
 .auth h1 {
@@ -319,11 +340,59 @@ footer {
 
 .auth-form button:hover {
     background-color: #ff7040;
+    box-shadow: 0 6px 16px rgba(244, 94, 43, 0.3);
 }
 
 .auth-form a{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.auth-form a:hover{
+    color: #ff7040;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(78, 78, 78);
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 12px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #000;
+    background-color: rgb(247, 247, 247);
+    border: 2px solid rgb(235, 235, 235);
+    border-radius: 8px;
+    outline: none;
+    transition: 0.25s;
+}
+
+.form-group input:focus {
+    border-color: #ff7040;
+    background-color: #fff;
+}
+
+.form-group input::placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.form-group input.invalid {
+    border-color: #e53935;
+    background-color: #fff5f5;
 }
 
 .field-error {
@@ -331,7 +400,7 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #e53935;
-    margin-top: -10px;
+    margin-top: 5px;
     margin-bottom: 4px;
     text-align: left;
 }
@@ -343,6 +412,24 @@ footer {
 .auth-form input.invalid {
     border-color: #e53935;
     background-color: #fff5f5;
+}
+
+.form-success {
+    display: none;
+    padding: 12px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1f7a3f;
+    background-color: #e6f7ec;
+    border: 1px solid #b8e5c7;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: -4px;
+}
+
+.form-success.show {
+    display: block;
 }
 
 .catalog-title {
@@ -571,11 +658,17 @@ footer {
     }
 
     .footer-container {
-        padding: 8% 0 5% 0;
+        flex-direction: column;
+        padding: 40px 0 25px;
+        gap: 40px;
     }
 
     .footer-info h3 {
         font-size: 4vw;
+    }
+
+    .footer-info-brend p {
+        font-size: 3.5vw;
     }
 
     .footer-info a {
@@ -777,18 +870,23 @@ footer {
     }
 
     .footer-container {
-        padding: 6% 0 4% 0;
-        gap: 4%;
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 0 25px;
     }
 
     .footer-info h3 {
-        font-size: 4.5vw;
+        font-size: 3vw;
         margin-bottom: 10px;
+    }
+
+    .footer-info-brend p {
+        font-size: 2.2vw;
     }
 
     .footer-info a,
     .footer-info p {
-        font-size: 2.5vw;
+        font-size: 2.2vw;
         margin-bottom: 5px;
     }
 
@@ -976,6 +1074,11 @@ footer {
         margin-bottom: 10px;
     }
 
+    .footer-info-brend p {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
     .footer-info a,
     .footer-info p {
         font-size: 14px;
@@ -1073,6 +1176,10 @@ footer {
 
     .footer-info a,
     .footer-info p  { 
+        font-size: 13px; 
+    }
+
+    .footer-info-brend p{
         font-size: 13px; 
     }
 
