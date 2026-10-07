@@ -273,7 +273,7 @@ footer {
 
 .auth-container {
     width: 100%;
-    min-height: 80vh;
+    flex: 1;
     background-color: rgb(247, 247, 247);
     display: flex;
     justify-content: center;
@@ -1220,7 +1220,7 @@ footer {
     }
 
     .card-bottom { 
-        margin: 0 16px 16px; 
+        margin: 0 16px 16px;
     }
 
     .card button {
