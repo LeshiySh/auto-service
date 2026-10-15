@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Card from '../components/Card'
 
 function Catalog() {
@@ -27,7 +28,10 @@ function Catalog() {
 
     return (
         <main>
-            <h1 className="catalog-title">Каталог услуг</h1>
+            <div className="catalog-header">
+                <h1 className="catalog-title">Каталог услуг</h1>
+                <Link to="/services/new" className="add-button">Добавить услугу</Link>
+            </div>
 
             <input type="text" className="search-input" placeholder="Поиск услуги" value={query} onChange={(e) => setQuery(e.target.value)}/>
 
