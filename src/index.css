@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .container {
     width: 100%;
     background-color: rgb(247, 247, 247);
@@ -10,6 +14,10 @@
     display: flex;
     flex-direction: column;
 }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Шапка сайта, header */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 
 header {
     display: flex;
@@ -34,7 +42,6 @@ header {
     color: black;
     font-weight: 700;
     font-size: 1.2vw;
-    font-family: Arial, Helvetica, sans-serif;
     transition: 0.5s;
 }
 
@@ -53,7 +60,6 @@ header {
     text-decoration: none;
     color: black;
     font-size: 1vw;
-    font-family: Arial, Helvetica, sans-serif;
     transition: 0.5s;
 }
 
@@ -81,13 +87,15 @@ header {
     transition: 0.3s;
 }
 
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Главная страница */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
 main {
     flex: 1;
     width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 1% 0;
     margin: 0 auto;
 }
 
@@ -122,13 +130,11 @@ main {
 }
 
 .poster-content h1{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 2.7vw;
     color: #fff;
 }
 
 .poster-content p{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1vw;
     color: rgb(196, 196, 196) ;
     margin: 2% 0;
@@ -136,7 +142,6 @@ main {
 
 .poster-content button {
     padding: 15px 40px;     
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8vw;
     font-weight: 700;
     color: #fff;                  
@@ -173,7 +178,6 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     border-left: 1px solid rgb(235, 235, 235);  
 }
 
@@ -190,11 +194,14 @@ main {
     color: rgb(102, 102, 102);    
 }
 
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Подвал сайта, footer */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
 footer {
     width: 100%;
     background-color: #2b2a29;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     margin-top: 60px;
 }
 
@@ -235,7 +242,8 @@ footer {
     text-transform: uppercase
 }
 
-.footer-info a {
+.footer-info a,
+.footer-info p {
     text-decoration: none;
     color: rgb(196, 196, 196);
     font-size: 0.75vw;
@@ -243,18 +251,7 @@ footer {
     transition: 0.3s;
 }
 
-.footer-info p {
-    color: rgb(196, 196, 196);
-    font-size: 0.75vw;
-    margin-bottom: 10px;
-    transition: 0.3s;
-}
-
-.footer-info a:hover {
-    color: #f45e2b;
-    padding-left: 4px;
-}
-
+.footer-info a:hover,
 .footer-info p:hover {
     color: #f45e2b;
     padding-left: 4px;
@@ -270,6 +267,10 @@ footer {
     color: rgb(150, 150, 150);
     font-size: 0.7vw;
 }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Страницы регистрации и авторизации */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 
 .auth-container {
     width: 100%;
@@ -298,7 +299,6 @@ footer {
     color: #000;
     text-align: center;
     margin-bottom: 30px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .auth-form {
@@ -307,28 +307,10 @@ footer {
     gap: 16px;
 }
 
-.auth-form input {
-    padding: 12px 15px;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #000;
-    background-color: rgb(247, 247, 247);
-    border: 2px solid rgb(235, 235, 235);
-    border-radius: 5px;
-    outline: none;
-    transition: 0.5s;
-}
-
-.auth-form input:focus {
-    border-color: #f45e2b;
-    background-color: #fff;
-}
-
 .auth-form button {
     margin-top: 8px;
     padding: 14px 20px;
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     color: #fff;
     background-color: #f45e2b;
@@ -345,7 +327,6 @@ footer {
 
 .auth-form a{
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: rgb(102, 102, 102);
     margin-top: 10px;
@@ -362,27 +343,31 @@ footer {
 }
 
 .form-group label {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 700;
     color: rgb(78, 78, 78);
     margin-bottom: 5px;
 }
 
-.form-group input {
+.form-group input,
+.auth-form input,
+.service-form textarea,
+.service-form select {
     padding: 12px 15px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: #000;
     background-color: rgb(247, 247, 247);
     border: 2px solid rgb(235, 235, 235);
     border-radius: 8px;
     outline: none;
-    transition: 0.25s;
+    transition: 0.3s;
 }
 
-.form-group input:focus {
-    border-color: #ff7040;
+.form-group input:focus,
+.auth-form input:focus,
+.service-form textarea:focus,
+.service-form select:focus {
+    border-color: #f45e2b;
     background-color: #fff;
 }
 
@@ -397,7 +382,6 @@ footer {
 
 .field-error {
     display: none;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #e53935;
     margin-top: 5px;
@@ -417,7 +401,6 @@ footer {
 .form-success {
     display: none;
     padding: 12px 15px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #1f7a3f;
@@ -432,8 +415,11 @@ footer {
     display: block;
 }
 
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Страница каталога и карточки услуг */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
 .catalog-title {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 32px;
     font-weight: 700;
     color: #000;
@@ -456,7 +442,6 @@ footer {
 
 .add-button {
     padding: 10px 20px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #fff;
@@ -475,7 +460,6 @@ footer {
     width: 100%;
     max-width: 500px;
     padding: 12px 18px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: #000;
     background-color: #fff;
@@ -501,6 +485,7 @@ footer {
 }
 
 .card {
+    width: 100%; 
     max-width: 500px;
     margin: 0 auto;
     display: flex;
@@ -525,7 +510,6 @@ footer {
 }
 
 .card h3 {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
     font-weight: 700;
     color: #000;
@@ -533,7 +517,6 @@ footer {
 }
 
 .card-desc {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     color: rgb(102, 102, 102);
     line-height: 1.4;
@@ -552,7 +535,6 @@ footer {
 
 .card-button {
     padding: 10px 18px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 700;
     color: #fff;
@@ -571,7 +553,6 @@ footer {
 }
 
 .card-price {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #f45e2b;
@@ -579,7 +560,6 @@ footer {
 }
 
 .catalog-status {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: rgb(102, 102, 102);
     text-align: center;
@@ -589,6 +569,10 @@ footer {
 .catalog-status.error {
     color: #e53935;
 }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Страница услуги, подробная информация*/
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 
 .service-detail-wrapper {
     width: 100%;
@@ -629,7 +613,6 @@ footer {
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .service-detail-image {
@@ -668,6 +651,9 @@ footer {
     color: #f45e2b;
 }
 
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Форма добавления и редактирования услуги */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 
 .form-page {
     width: 100%;
@@ -677,7 +663,6 @@ footer {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
@@ -693,26 +678,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 16px;
-}
-
-.service-form textarea,
-.service-form select {
-    padding: 12px 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: #000;
-    background-color: rgb(247, 247, 247);
-    border: 2px solid rgb(235, 235, 235);
-    border-radius: 8px;
-    outline: none;
-    transition: 0.25s;
-    resize: vertical;
-}
-
-.service-form textarea:focus,
-.service-form select:focus {
-    border-color: #424242;
-    background-color: #fff;
 }
 
 .form-hint {
@@ -749,7 +714,6 @@ footer {
 .form-actions button {
     flex: 1;
     padding: 14px 20px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: 700;
     color: #fff;
@@ -779,7 +743,6 @@ footer {
 .edit-button {
     display: inline-block;
     padding: 12px 24px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #fff;
@@ -793,9 +756,12 @@ footer {
     background-color: #1a1a1a;
 }
 
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Окно удаления услуги */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
 .delete-button {
     padding: 12px 24px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #d32f2f;
@@ -830,7 +796,6 @@ footer {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .modal h3 {
@@ -855,7 +820,6 @@ footer {
 
 .modal-cancel {
     padding: 10px 20px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: rgb(78, 78, 78);
@@ -872,7 +836,6 @@ footer {
 
 .modal-confirm {
     padding: 10px 20px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #fff;
@@ -892,6 +855,10 @@ footer {
     opacity: 0.6;
     cursor: not-allowed;
 }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Адаптивность */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 
 @media (min-width: 300px) and (max-width: 380px) {
     header {
