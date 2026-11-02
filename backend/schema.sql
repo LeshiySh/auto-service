@@ -1,5 +1,17 @@
+DROP TABLE IF EXISTS applications;
 DROP TABLE IF EXISTS services;
 DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    fio VARCHAR(255) NOT NULL,
+    login VARCHAR(100) UNIQUE NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(20) DEFAULT 'USER' NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW()
+);
 
 CREATE TABLE categories (
     id SERIAL PRIMARY KEY,
@@ -13,6 +25,16 @@ CREATE TABLE services (
     price INTEGER,
     image VARCHAR(255),
     category_id INTEGER REFERENCES categories(id) ON DELETE SET NULL
+);
+
+CREATE TABLE applications (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE NOT NULL,
+    service_id INTEGER REFERENCES services(id) ON DELETE CASCADE NOT NULL,
+    car_brand VARCHAR(100) NOT NULL,
+    comment TEXT,
+    status VARCHAR(20) DEFAULT 'NEW' NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW()
 );
 
 INSERT INTO categories (name) VALUES
