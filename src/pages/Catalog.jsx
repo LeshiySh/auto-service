@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Card from '../components/Card'
+import { useAuth } from '../context/AuthContext'
 
 function Catalog() {
+    const { user } = useAuth()
     const [services, setServices] = useState([])
     const [query, setQuery] = useState('')
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
+    const isAdmin = user && user.role === 'ADMIN'
 
     useEffect(() => {
         fetch('http://localhost:3000/api/services')
@@ -30,7 +33,7 @@ function Catalog() {
         <main>
             <div className="catalog-header">
                 <h1 className="catalog-title">Каталог услуг</h1>
-                <Link to="/services/new" className="add-button">Добавить услугу</Link>
+                {isAdmin && ( <Link to="/services/new" className="add-button">Добавить услугу</Link> ) }
             </div>
 
             <input type="text" className="search-input" placeholder="Поиск услуги" value={query} onChange={(e) => setQuery(e.target.value)}/>

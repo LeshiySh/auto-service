@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import ServiceDetail from './pages/ServiceDetail'
 import ServiceForm from './pages/ServiceForm'
+import Cabinet from './pages/Cabinet'
 
 function App() {
     const location = useLocation()
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/services/new" element={<ServiceForm />} />
                 <Route path="/services/:id/edit" element={<ServiceForm />} />
                 <Route path="/services/:id" element={<ServiceDetail />} />
+                <Route path="/cabinet" element={<Cabinet />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
             </Routes>

@@ -87,6 +87,20 @@ header {
     transition: 0.3s;
 }
 
+.nav-logout {
+    background: none;
+    border: none;
+    padding: 0;
+    color: black;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-logout:hover {
+    color: rgb(102, 102, 102);
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 /* Главная страница */
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -651,6 +665,37 @@ footer {
     color: #f45e2b;
 }
 
+.book-button {
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #f45e2b;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.book-button:hover {
+    background-color: #ff7040;
+}
+
+.modal-service-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.modal-service-price {
+    color: #f45e2b;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 /* Форма добавления и редактирования услуги */
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -854,6 +899,206 @@ footer {
 .modal-confirm:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Личный кабинет */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+.cabinet-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+
+.cabinet-subtitle {
+    margin: 0 0 20px 0;
+}
+
+.user-info {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-size: 15px;
+    color: rgb(78, 78, 78);
+}
+
+.user-info p {
+    margin: 0;
+}
+
+.applications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.application-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.application-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    border-bottom: 2px solid rgb(235, 235, 235);
+    padding-bottom: 12px;
+}
+
+.application-card p {
+    margin-bottom: 10px;
+    color: rgb(78, 78, 78);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.app-date {
+    font-size: 13px;
+    color: rgb(150, 150, 150);
+    margin-top: 16px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 16px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    font-size: 14px;
+    color: rgb(78, 78, 78);
+}
+
+.admin-table th {
+    background-color: rgb(247, 247, 247);
+    font-weight: 700;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.table-muted {
+    color: rgb(150, 150, 150);
+    font-size: 12px;
+}
+
+.status-select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid rgb(235, 235, 235);
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.25s;
+}
+
+.app-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-NEW {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border-color: #90caf9;
+}
+
+.status-CONFIRMED {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-color: #a5d6a7;
+}
+
+.status-REJECTED {
+    background-color: #ffebee;
+    color: #c62828;
+    border-color: #ef9a9a;
+}
+
+.status-DONE {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+    border-color: #ce93d8;
+}
+
+.text-center {
+    text-align: center;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+
+.app-actions {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgb(235, 235, 235);
+    display: flex;
+    gap: 10px;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: 0.25s;
+}
+
+.btn-edit {
+    background-color: #424242;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background-color: #1a1a1a;
+}
+
+.btn-delete {
+    background-color: #fff;
+    color: #d32f2f;
+    border: 1px solid #f5c6c6;
+}
+
+.btn-delete:hover {
+    background-color: #d32f2f;
+    color: #fff;
+    border-color: #d32f2f;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -1121,6 +1366,37 @@ footer {
     .form-page h1 {
         font-size: 22px;
     }
+
+    .nav-logout {
+        font-size: 16px;
+        padding: 16px 5%;
+        width: 100%;
+        text-align: left;
+        border-top: 1px solid rgb(235, 235, 235);
+    }
+
+    .cabinet-wrapper {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    .user-info { 
+        padding: 20px; 
+        font-size: 14px; 
+        flex-direction: column; 
+        gap: 12px; 
+        border-left: none;
+        border-top: 4px solid #f45e2b;
+    }
+    .app-header { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 10px; 
+    }
+    .admin-table th,
+    .admin-table td {
+        padding: 10px;
+        font-size: 13px;
+    }
 }
 
 @media (min-width: 381px) and (max-width: 767px) {
@@ -1387,6 +1663,37 @@ footer {
 
     .form-page h1 {
         font-size: 22px;
+    }
+
+    .nav-logout {
+        font-size: 16px;
+        padding: 16px 5%;
+        width: 100%;
+        text-align: left;
+        border-top: 1px solid rgb(235, 235, 235);
+    }
+
+    .cabinet-wrapper {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    .user-info { 
+        padding: 20px; 
+        font-size: 14px; 
+        flex-direction: column; 
+        gap: 12px; 
+        border-left: none;
+        border-top: 4px solid #f45e2b;
+    }
+    .app-header { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 10px; 
+    }
+    .admin-table th,
+    .admin-table td {
+        padding: 10px;
+        font-size: 13px;
     }
 }
 

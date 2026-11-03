@@ -1,8 +1,17 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
+    const { user, logout } = useAuth()
+    const navigate = useNavigate()
+
+    const handleLogout = () => {
+        logout();
+        navigate('/');
+        setMenuOpen(false);
+    }
 
     return (
         <header>
@@ -18,10 +27,24 @@ function Header() {
                 </button>
 
                 <nav className={menuOpen ? 'open' : ''}>
-                    <Link to="/" > Главная </Link>
-                    <Link to="/catalog" > Каталог </Link>
-                    <Link to="/login" > Войти </Link>
-                    <Link to="/register" > Регистрация </Link>
+                    <Link to="/" onClick={() => setMenuOpen(false)}>Главная</Link>
+                    <Link to="/catalog" onClick={() => setMenuOpen(false)}>Каталог</Link>
+                    
+                    {user ? (
+                        <>
+                            <Link to="/cabinet" onClick={() => setMenuOpen(false)}>
+                                Кабинет
+                            </Link>
+                            <button className="nav-logout" onClick={handleLogout}>
+                                Выйти
+                            </button>
+                        </>
+                    ) : (
+                        <>
+                            <Link to="/login" onClick={() => setMenuOpen(false)}>Войти</Link>
+                            <Link to="/register" onClick={() => setMenuOpen(false)}>Регистрация</Link>
+                        </>
+                    )}
                 </nav>
             </div>
         </header>
